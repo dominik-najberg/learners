@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Application;
-
 
 use App\Domain\LuckyNumber;
 
@@ -20,6 +18,8 @@ class LuckyNumberService
 
     public function getLuckyNumberDTO(): LuckyNumberDTO
     {
-        return new LuckyNumberDTO($this->luckyNumber->generate(self::MAX_NUMBER));
+        $number = $this->luckyNumber->generate(self::MAX_NUMBER);
+
+        return new LuckyNumberDTO($number);
     }
 }

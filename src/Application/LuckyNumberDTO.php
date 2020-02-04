@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Application;
-
 
 class LuckyNumberDTO
 {
@@ -13,9 +11,6 @@ class LuckyNumberDTO
         $this->number = $number;
     }
 
-    /**
-     * @return int
-     */
     public function getNumber(): int
     {
         return $this->number;
